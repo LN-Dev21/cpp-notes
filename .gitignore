@@ -1,41 +1,92 @@
-# Prerequisites
-*.d
+# CLion IDE 配置文件
+.idea/
+*.iws
+*.iml
+*.ipr
+cmake-build-*/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# 编译输出目录
+build/
+out/
+bin/
+obj/
+dist/
 
-# Precompiled Headers
-*.gch
-*.pch
+# CMake 相关文件
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+install_manifest.txt
+CTestTestfile.cmake
+Testing/
 
-# Linker files
-*.ilk
+# 编译相关文件
+*.d                # 依赖文件
+*.slo              # 共享库对象文件
+*.lo               # 库对象文件
+*.o                # 目标文件
+*.obj              # Windows目标文件
+*.gch              # 预编译头文件
+*.pch              # 预编译头文件
+*.ilk              # 链接器增量库
+*.pdb              # 调试数据库
+*.dwo              # 调试信息文件
 
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
+# 模块文件
 *.mod
 *.smod
 
-# Compiled Static libraries
+# 库文件
 *.lai
 *.la
-*.a
-*.lib
+*.a                # 静态库
+*.lib              # Windows静态库
+*.so               # Linux动态库
+*.dylib            # macOS动态库
+*.dll              # Windows动态库
 
-# Executables
+# 可执行文件
 *.exe
 *.out
 *.app
 
-# debug information files
-*.dwo
+# 构建系统相关
+*.ninja*
+.ninja_deps
+.ninja_log
+
+# 临时文件和备份文件
+*.log
+*.swp              # Vim交换文件
+*.swo              # Vim交换文件
+*~                 # 临时备份文件
+.#*                # 临时锁定文件
+
+# 系统特定文件
+.DS_Store          # macOS
+Thumbs.db          # Windows
+ehthumbs.db        # Windows
+$RECYCLE.BIN/      # Windows
+
+# 其他工具配置
+*.vscode/          # VS Code配置
+*.code-workspace   # VS Code工作区
+*.sh               # Shell脚本
+*.yaml
+*.yml
+*.check_cache
+
+# 文本文件规则（除CMakeLists.txt外）
+*.txt
+!CMakeLists.txt
+
+# 环境配置文件
+.env
+.env.local
+.env.*
+!.env.example
+
+# 日志目录
+logs/
